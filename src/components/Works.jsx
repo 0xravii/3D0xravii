@@ -24,9 +24,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-4 sm:p-5 rounded-2xl w-full sm:w-[360px] min-h-[400px] sm:min-h-[450px] flex flex-col'
       >
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[200px] sm:h-[230px]'>
           <img
             src={image}
             alt='project_image'
@@ -47,9 +47,9 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        <div className='mt-5 flex-grow'>
+          <h3 className='text-white font-bold text-[18px] sm:text-[24px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[12px] sm:text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -78,13 +78,13 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[14px] sm:text-[17px] max-w-3xl leading-[25px] sm:leading-[30px]'
         >
          Following certifications showcase my skills and knowledge in the field of cybersecurity. Each certification is briefly described, highlighting the expertise gained and the competencies acquired. These certifications reflect my ability to identify and mitigate security threats, implement security measures, and ensure the integrity and confidentiality of information systems
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-16 sm:mt-20 flex flex-wrap justify-center gap-5 sm:gap-7'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

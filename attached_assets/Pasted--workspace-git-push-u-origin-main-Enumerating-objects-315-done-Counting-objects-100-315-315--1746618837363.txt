@@ -1,0 +1,64 @@
+/workspace$ git push -u origin main
+Enumerating objects: 315, done.
+Counting objects: 100% (315/315), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (280/280), done.
+Writing objects: 100% (315/315), 16.65 MiB | 4.10 MiB/s, done.
+Total 315 (delta 135), reused 162 (delta 28), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (135/135), done.
+remote: fatal: did not receive expected object c9096496bd71c8ef08512d94f84ebfb0db8ee0f8
+error: remote unpack failed: index-pack failed
+To github.com:0xravii/0xravii.git
+ ! [remote rejected] main -> main (failed)
+error: failed to push some refs to 'github.com:0xravii/0xravii.git'
+~/workspace$ git fsck --full
+git gc --prune=now
+Checking object directories: 100% (256/256), done.
+Checking objects: 100% (177/177), done.
+Enumerating objects: 323, done.
+Counting objects: 100% (323/323), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (288/288), done.
+Writing objects: 100% (323/323), done.
+Total 323 (delta 135), reused 162 (delta 28), pack-reused 0 (from 0)
+~/workspace$ git push --all
+Enumerating objects: 323, done.
+Counting objects: 100% (323/323), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (181/181), done.
+Writing objects: 100% (323/323), 16.65 MiB | 4.08 MiB/s, done.
+Total 323 (delta 135), reused 323 (delta 135), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (135/135), done.
+remote: fatal: did not receive expected object c9096496bd71c8ef08512d94f84ebfb0db8ee0f8
+error: remote unpack failed: index-pack failed
+To github.com:0xravii/0xravii.git
+ ! [remote rejected] main -> main (failed)
+ ! [remote rejected] replit-agent -> replit-agent (failed)
+error: failed to push some refs to 'github.com:0xravii/0xravii.git'
+~/workspace$ git push -u origin main --force
+Enumerating objects: 315, done.
+Counting objects: 100% (315/315), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (175/175), done.
+Writing objects: 100% (315/315), 16.65 MiB | 4.40 MiB/s, done.
+Total 315 (delta 133), reused 314 (delta 133), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (133/133), done.
+remote: fatal: did not receive expected object c9096496bd71c8ef08512d94f84ebfb0db8ee0f8
+error: remote unpack failed: index-pack failed
+To github.com:0xravii/0xravii.git
+ ! [remote rejected] main -> main (failed)
+error: failed to push some refs to 'github.com:0xravii/0xravii.git'
+~/workspace$ git push -u origin main
+Enumerating objects: 315, done.
+Counting objects: 100% (315/315), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (175/175), done.
+Writing objects: 100% (315/315), 16.65 MiB | 4.39 MiB/s, done.
+Total 315 (delta 133), reused 314 (delta 133), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (133/133), done.
+remote: fatal: did not receive expected object c9096496bd71c8ef08512d94f84ebfb0db8ee0f8
+error: remote unpack failed: index-pack failed
+To github.com:0xravii/0xravii.git
+ ! [remote rejected] main -> main (failed)
+error: failed to push some refs to 'github.com:0xravii/0xravii.git'
+~/workspace$ 

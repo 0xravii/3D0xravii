@@ -1,0 +1,187 @@
+**Full Details of RaviKumar Molleti**
+
+---
+
+**Contact Information:**
+- **Address:** 10-90 Pendurthi, Visakhapatnam, Andhra Pradesh
+- **Phone:** 7989999344
+- **Email:** molletiravikumar798@gmail.com
+- **LinkedIn:** [linkedin.com/in/ravi-kumar-2a566721b](https://linkedin.com/in/ravi-kumar-2a566721b)
+- **Personal Website:** [0xravii.netlify.app](https://0xravii.netlify.app)
+
+---
+
+**Professional Summary:**
+- **Position:** Security Analyst
+- **Expertise:** Ethical hacking, penetration testing, blockchain security
+- **Current Internship:** Symbiosys Technologies
+- **Certifications:** Certified Ethical Hacker (CEH v12), Professional Penetration Tester (PENT)
+- **Community Involvement:** Leader in Resethacker community, guiding over 10,000 individuals in cybersecurity careers.
+
+---
+
+**Work Experience:**
+
+1. **Symbiosys Technologies**
+   - **Location:** Visakhapatnam, AP India
+   - **Duration:** 11/2024 - Present
+   - **Role:** Ethical Hacker Intern
+   - **Responsibilities:**
+     - Exposed technical flaws and security weaknesses in various industry-based projects through ethical hacking and penetration testing.
+     - Utilized Splunk for real-time data monitoring, log analysis, and threat detection.
+     - Gained hands-on experience in network security, including traffic analysis and securing infrastructure.
+     - Worked with cross-functional teams to implement security measures for financial services, healthcare, and public sector clients.
+     - Contributed to risk assessment and reporting in accordance with international standards of cybersecurity.
+
+2. **Darkrelay Security Labs**
+   - **Location:** Bengaluru, Karnataka
+   - **Duration:** 03/2022 - 09/2022
+   - **Role:** Professional Penetration Tester Intern
+   - **Focus:** Security validation, threat hunting, and consulting.
+
+3. **ERSEGMENT Private Limited**
+   - **Location:** Hyderabad, Telangana
+   - **Role:** Ethical Hacker Intern
+   - **Responsibilities:**
+     - Conducted penetration testing and vulnerability assessments to identify and mitigate security risks for clients.
+     - Collaborated with teams to develop and implement security validation strategies and threat hunting methodologies.
+     - Assisted organizations in enhancing their security posture against evolving cyber threats.
+     - Identified and reduced security vulnerabilities by 30%, ensuring a secure environment for confidential user data, enhancing overall system resilience.
+     - Conducted penetration testing to evaluate and enhance the security posture of network systems.
+     - Performed vulnerability assessments that led to the implementation of critical security measures, improving overall system resilience.
+     - Developed comprehensive report documentation for security findings, facilitating informed decision-making in cybersecurity strategies.
+
+---
+
+**Education:**
+
+- **Diploma in Computer Science Engineering**
+  - **Institution:** Sanketika Polytechnic College
+  - **Location:** Vishakhapatnam, Andhra Pradesh, India
+  - **GPA:** 2.3
+  - **Duration:** 08/2022 - 06/2024
+  - **Achievements:**
+    - Served as Class Representative (CR), facilitating effective communication between students and faculty.
+    - Won First Prize in the Project Expo at the college fest for a project on Blockchain in ECommerce.
+    - Developed skills in Database Management Systems (DBMS) and SQL for efficient data management.
+    - Passionate about cybersecurity, conducting penetration testing and vulnerability assessments to enhance network security.
+
+---
+
+**Certifications:**
+
+- **Ethical Hacking Workshop**
+  - **Institution:** IIT Bombay
+  - **Duration:** 03/2024 - Present
+
+- **Certified Appsec Practitioner**
+  - **Institution:** The SecOps group
+  - **Duration:** 01/2024 - Present
+
+- **Blockchain Developer Program**
+  - **Institution:** Solana Foundation x Nas Academy
+  - **Duration:** 08/2023 - Present
+
+- **Certified Ethical Hacker V12**
+  - **Institution:** EC Council
+  - **Duration:** 01/2024 - 01/2027
+
+- **Professional Penetration Tester (PENT)**
+  - **Institution:** Darkrelay Security Labs
+
+- **Try Hack Me Advent**
+- **TryHackme**
+
+---
+
+**Awards & Scholarships:**
+
+- **Post Matric Scholarship**
+  - **Awarding Body:** Andhra Pradesh government
+  - **Date:** 08/2022
+
+---
+
+**Projects:**
+
+1. **Exploring Dark and Deep Web Risks**
+   - **Platform:** Cffeinetrip
+   - **Description:** Created a website to educate users on the dark web and deep web, covering their differences, risks, and safety measures. Conducted research to provide accurate information on security threats and legal implications. Designed user-friendly navigation to enhance accessibility and understanding.
+
+2. **DeCare: Empowering Transparent and Secure Fundraising**
+   - **Platform:** Solana Foundation
+   - **Description:** Developed and implemented an online fundraising platform with a blockchain-based donor verification system that increased receipt rate from 75% to 95%.
+
+---
+
+**Volunteering & Leadership:**
+
+- **Resethacker**
+  - **Duration:** 06/2023 - Present
+  - **Role:** Team Leader
+  - **Location:** Visakhapatnam, Andhra Pradesh
+  - **Mission:** Spearheading efforts to enable 10,000 individuals in cybersecurity by fostering a culture of career development.
+  - **Vision:** Build a world-class, India-centric community accessible to all, promoting diverse pathways to careers in cybersecurity.
+  - **Goal:** Establish a community-led Ed-tech platform to track student progress and provide extended support, enhancing success beyond certifications.
+
+---
+
+**Publications:**
+
+- **Unveiling The Unseen: Stay Ahead of Zero-Day Vulnerabilities**
+  - **Platform:** Cffeinetrip
+  - **Description:** Explored the impact of zero-day vulnerabilities on cybersecurity and strategies for proactive defense. Provided insights into identifying and mitigating risks associated with unknown vulnerabilities.
+
+---
+
+**Skills:**
+
+- **Soft Skills:**
+  - Adaptability
+  - Analytical Thinking
+  - Effective Communication
+  - Leadership Experience
+  - Team Collaboration
+
+- **Technical Skills:**
+  - Agile methodologies
+  - C, C++
+  - CSS
+  - Database Design
+  - Data Structures
+  - Git
+  - HTML
+  - Java
+  - JavaScript
+  - Operating Systems
+  - Python
+  - Solidity
+  - SQL
+
+- **Professional Skills:**
+  - AMSS
+  - Blockchain Security
+  - Burp Suite
+  - Cloud Security
+  - Common Vulnerabilities
+  - CVSS Automation
+  - Identity and Access Management (IAM)
+  - Incident Response
+  - Malware Analysis
+  - Metasploit
+  - Network Security
+  - Nmap
+  - OWASP Top 10
+  - OWASP ZAP
+  - Penetration Testing
+  - Reconnaissance
+  - Risk Management
+  - Security Auditing
+  - Security Compliance
+  - Splunk Enterprise
+  - Vulnerability Assessment
+  - Web/API Hacking
+
+--- 
+
+This document contains the complete details of RaviKumar Molleti's professional background, education, certifications, projects, and skills in cybersecurity.

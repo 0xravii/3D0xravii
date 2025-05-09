@@ -42,10 +42,10 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-20 h-20 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-           0xravii &nbsp;
-            <span className='sm:block hidden'> | Hacker </span>
+          <img src={logo} alt='logo' className='w-16 h-16 object-contain' /> {/* Increased from w-12 h-12 to w-16 h-16 */}
+          <p className='text-white text-[24px] font-bold cursor-pointer flex '> {/* Increased text size from 18px to 24px */}
+            Ravi &nbsp;
+            <span className='sm:block hidden'> | Security Researcher</span>
           </p>
         </Link>
 
@@ -61,6 +61,12 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li
+            className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
+            onClick={() => setActive("blog")}
+          >
+            <a href="#blog">Blog</a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -91,6 +97,15 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li
+                className="font-poppins font-medium cursor-pointer text-[16px] text-secondary"
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("blog");
+                }}
+              >
+                <a href="#blog">Blog</a>
+              </li>
             </ul>
           </div>
         </div>

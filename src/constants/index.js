@@ -44,7 +44,7 @@ export const navLinks = [
   {
     id: "resume",
     title: "Resume",
-  }
+  },
 ];
 
 const services = [
@@ -125,7 +125,7 @@ const experiences = [
   {
     title: "Ethical Hacker Intern",
     company_name: "Symbiosys Technologies",
-    icon: starbucks,
+    icon: starbucks, // Changed from symbiosyslogo to meta
     iconBg: "#383E56",
     date: "November 2024 - Present",
     points: [
@@ -173,7 +173,8 @@ const testimonials = [
     name: "Pooja sri",
     designation: "Cyber Security Analyst",
     company: "",
-    image: " google.com",
+    // Fix the invalid image URL
+    image: "https://randomuser.me/api/portraits/women/4.jpg", // Using a placeholder image instead of invalid google.com URL
   },
   {
     testimonial:
@@ -195,20 +196,20 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Dark Web Risk Education Platform",
+    name: "Certified Ethical Hacker (CEH) v12",
     description:
-      "Educational website focused on dark web and deep web risks, providing comprehensive information about security threats, legal implications, and safety measures. Features user-friendly navigation and detailed research-based content.",
+      "Achieved EC-Council's CEH v12 certification, demonstrating advanced expertise in ethical hacking methodologies, penetration testing, and security assessment. Mastered tools and techniques for identifying and mitigating cybersecurity vulnerabilities across diverse platforms.",
     tags: [
       {
-        name: "WebSecurity",
+        name: "Ethical Hacking",
         color: "blue-text-gradient",
       },
       {
-        name: "Education",
+        name: "Penetration Testing",
         color: "green-text-gradient",
       },
       {
-        name: "Research",
+        name: "Security Assessment",
         color: "pink-text-gradient",
       },
     ],
@@ -216,9 +217,9 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "DeCare - Blockchain Fundraising",
+    name: "Solana Blockchain Developer Certification",
     description:
-      "Developed a transparent fundraising platform using blockchain technology, implementing donor verification system that increased receipt rate from 75% to 95%. Built on Solana blockchain for enhanced security and transparency.",
+      "Earned Solana Foundation's blockchain developer certification, demonstrating expertise in building decentralized applications on the Solana network. Mastered Rust programming, smart contract development, and implementation of secure blockchain solutions using Solana's high-performance architecture.",
     tags: [
       {
         name: "Blockchain",
@@ -229,32 +230,32 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "Security",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Zero-Day Vulnerability Research",
-    description:
-      "Published comprehensive research on zero-day vulnerabilities, focusing on proactive defense strategies and risk mitigation. Includes analysis of vulnerability identification methods and impact on cybersecurity landscape.",
-    tags: [
-      {
-        name: "Research",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CyberSecurity",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Defense",
+        name: "Smart Contracts",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Certified AppSec Practitioner (CAP)",
+    description:
+      "Earned SecOps Group's Certified AppSec Practitioner certification, demonstrating expertise in application security testing, vulnerability assessment, and secure development practices. Mastered OWASP Top 10 vulnerabilities, secure coding guidelines, and modern AppSec tools and methodologies.",
+    tags: [
+      {
+        name: "AppSec",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Secure Development",
+        color: "green-text-gradient",
+      },
+      {
+        name: "OWASP",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
     source_code_link: "https://github.com/",
   },
 ];

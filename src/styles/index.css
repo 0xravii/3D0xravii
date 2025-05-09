@@ -1,0 +1,130 @@
+.service-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-icon {
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-icon {
+  transform: rotate(360deg);
+}
+
+.technology-card {
+  transition: all 0.3s ease;
+}
+
+.technology-card:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.2);
+}
+
+.project-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.testimonial-card:hover {
+  transform: rotateY(10deg);
+  box-shadow: -20px 20px 30px -15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-image {
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card:hover .testimonial-image {
+  transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-icon {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.tech-icon:nth-child(1) { animation-delay: 0.1s; }
+.tech-icon:nth-child(2) { animation-delay: 0.2s; }
+.tech-icon:nth-child(3) { animation-delay: 0.3s; }
+/* Continue for all icons */
+
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-card {
+  opacity: 0;
+  animation: slideInFromLeft 0.8s ease forwards;
+  animation-play-state: paused;
+}
+
+.experience-card.visible {
+  animation-play-state: running;
+}
+
+.hero-heading {
+  position: relative;
+  z-index: 20;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 15;
+}
+
+.computer-canvas-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    z-index: 30;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 25;
+  }
+  
+  .computer-canvas-wrapper {
+    position: relative;
+    z-index: 10;
+    opacity: 0.8; /* Optional: slightly reduce opacity on mobile */
+  }
+}

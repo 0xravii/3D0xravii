@@ -9,6 +9,8 @@ import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import Blogs from "./Blogs";
+import Footer from "./Footer";
 
 export {
   Hero,
@@ -24,5 +26,7 @@ export {
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  Blogs,
+  Footer
 };
