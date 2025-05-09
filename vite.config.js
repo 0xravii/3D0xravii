@@ -8,7 +8,19 @@ export default defineConfig({
     }
   },
   plugins: [react()],
-  base: "/0xravii",
+  base: "/0xravii/", // Make sure this matches your Cloudflare Pages project name
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
+  },
   publicDir: 'public', // Ensure this is set
-  assetsInclude: ['**/*.gltf'], // Add GLTF files to assets
+  assetsInclude: ['**/*.gltf'] // Add GLTF files to assets
 })

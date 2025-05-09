@@ -1,0 +1,9 @@
+# All assets should get the proper MIME type
+/0xravii/assets/*
+  Content-Type: application/javascript
+  
+/0xravii/assets/*.css
+  Content-Type: text/css
+  
+/0xravii/assets/*.js
+  Content-Type: application/javascript
