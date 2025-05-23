@@ -24,9 +24,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-4 sm:p-5 rounded-2xl w-full sm:w-[360px] min-h-[400px] sm:min-h-[450px] flex flex-col'
+        className='bg-tertiary p-3 xs:p-4 sm:p-5 rounded-2xl w-full xs:w-[320px] sm:w-[360px] min-h-[380px] xs:min-h-[400px] sm:min-h-[450px] flex flex-col'
       >
-        <div className='relative w-full h-[200px] sm:h-[230px]'>
+        <div className='relative w-full h-[180px] xs:h-[200px] sm:h-[230px]'>
           <img
             src={image}
             alt='project_image'
@@ -36,7 +36,7 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient w-8 h-8 sm:w-10 sm:h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={github}
@@ -47,16 +47,16 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className='mt-5 flex-grow'>
-          <h3 className='text-white font-bold text-[18px] sm:text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[12px] sm:text-[14px]'>{description}</p>
+        <div className='mt-4 sm:mt-5 flex-grow'>
+          <h3 className='text-white font-bold text-[16px] xs:text-[18px] sm:text-[24px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[11px] xs:text-[12px] sm:text-[14px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-3 sm:mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[12px] sm:text-[14px] ${tag.color}`}
             >
               #{tag.name}
             </p>

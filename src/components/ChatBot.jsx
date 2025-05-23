@@ -308,241 +308,243 @@ const ChatBot = () => {
   });
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end">
-      {/* Floating action button */}
-      <button
-        onClick={() => {
-          setIsOpen(!isOpen);
-          setIsMinimized(false);
-          if (inputRef.current && isOpen === false) {
-            setTimeout(() => inputRef.current.focus(), 100);
-          }
-        }}
-        className="bg-[#915EFF] hover:bg-[#7140d1] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
-        aria-label="Chat with Ravi"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"} />
-        </svg>
-      </button>
+    <div style={{ display: 'block' }}>  {/* Replace jsx={true} with appropriate CSS */}
+      <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end">
+        {/* Floating action button */}
+        <button
+          onClick={() => {
+            setIsOpen(!isOpen);
+            setIsMinimized(false);
+            if (inputRef.current && isOpen === false) {
+              setTimeout(() => inputRef.current.focus(), 100);
+            }
+          }}
+          className="bg-[#915EFF] hover:bg-[#7140d1] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
+          aria-label="Chat with Ravi"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
+                  d={isOpen ? "M6 18L18 6M6 6l12 12" : "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"} />
+          </svg>
+        </button>
 
-      {/* Chat window */}
-      {isOpen && (
-        <div className={`absolute ${isMinimized ? 'h-14' : 'h-[600px]'} bottom-16 right-0 w-96 bg-white rounded-lg shadow-2xl overflow-hidden transition-all duration-300 fade-in border border-gray-200`}>
-          {/* Header with control buttons */}
-          <div className="bg-[#915EFF] text-white p-3 flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                <FaUserCircle className="text-[#915EFF] text-xl" />
-              </div>
-              <h3 className="font-bold">💬 Chat with Ravi</h3>
-            </div>
-            <div className="flex gap-2">
-              <button 
-                onClick={() => setIsMinimized(!isMinimized)}
-                className="text-white hover:text-gray-200 transition-colors"
-                aria-label={isMinimized ? "Expand" : "Minimize"}
-              >
-                <FaWindowMinimize size={16} />
-              </button>
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="text-white hover:text-gray-200 transition-colors"
-                aria-label="Close"
-              >
-                <FaTimesCircle size={16} />
-              </button>
-            </div>
-          </div>
-
-          {!isMinimized && (
-            <>
-              {/* Conversation history view */}
-              {showHistory ? (
-                <div className="h-[calc(600px-120px)] bg-gray-50 p-4 overflow-y-auto">
-                  <div className="mb-4 flex items-center justify-between">
-                    <h4 className="font-medium">Conversation History</h4>
-                    <button 
-                      onClick={() => setShowHistory(false)}
-                      className="text-gray-500 hover:text-gray-700"
-                    >
-                      Back to Chat
-                    </button>
-                  </div>
-                  
-                  <input
-                    type="text"
-                    placeholder="Search conversations..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full p-2 mb-4 border border-gray-300 rounded-lg"
-                  />
-                  
-                  {filteredHistory.length > 0 ? (
-                    <div className="space-y-2">
-                      {filteredHistory
-                        .sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated))
-                        .map((conversation) => (
-                          <div 
-                            key={conversation.id} 
-                            onClick={() => loadConversation(conversation.id)}
-                            className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer border border-gray-200"
-                          >
-                            <p className="text-sm font-medium truncate">{conversation.preview}</p>
-                            <p className="text-xs text-gray-500">
-                              {new Date(conversation.lastUpdated).toLocaleString()}
-                            </p>
-                          </div>
-                        ))}
-                    </div>
-                  ) : (
-                    <p className="text-center text-gray-500 my-4">No conversation history found</p>
-                  )}
+        {/* Chat window */}
+        {isOpen && (
+          <div className={`absolute ${isMinimized ? 'h-14' : 'h-[600px]'} bottom-16 right-0 w-96 bg-white rounded-lg shadow-2xl overflow-hidden transition-all duration-300 fade-in border border-gray-200`}>
+            {/* Header with control buttons */}
+            <div className="bg-[#915EFF] text-white p-3 flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                  <FaUserCircle className="text-[#915EFF] text-xl" />
                 </div>
-              ) : (
-                <>
-                  {/* Tabs for question categories */}
-                  <div className="bg-gray-100 p-2 overflow-x-auto flex gap-2 border-b border-gray-200">
-                    {categories.map((cat) => (
-                      <button
-                        key={cat.id}
-                        onClick={() => setCategory(cat.id)}
-                        className={`px-3 py-1 text-sm rounded-full whitespace-nowrap ${
-                          category === cat.id 
-                            ? 'bg-[#915EFF] text-white' 
-                            : 'bg-white text-gray-700 hover:bg-gray-200'
-                        }`}
-                      >
-                        {cat.name}
-                      </button>
-                    ))}
-                  </div>
+                <h3 className="font-bold">💬 Chat with Ravi</h3>
+              </div>
+              <div className="flex gap-2">
+                <button 
+                  onClick={() => setIsMinimized(!isMinimized)}
+                  className="text-white hover:text-gray-200 transition-colors"
+                  aria-label={isMinimized ? "Expand" : "Minimize"}
+                >
+                  <FaWindowMinimize size={16} />
+                </button>
+                <button 
+                  onClick={() => setIsOpen(false)}
+                  className="text-white hover:text-gray-200 transition-colors"
+                  aria-label="Close"
+                >
+                  <FaTimesCircle size={16} />
+                </button>
+              </div>
+            </div>
 
-                  {/* Message area with padding at top for questions */}
-                  <div className="h-[calc(600px-184px)] overflow-y-auto p-4 space-y-4 bg-gray-50">
-                    {/* Suggested Questions - Fixed position at top with padding */}
-                    <div className="space-y-2 mb-6 bg-gray-50 pt-2 pb-3">
-                      <p className="text-gray-600 text-sm font-medium">Suggested Questions:</p>
-                      <div className="grid grid-cols-1 gap-2">
-                        {suggestedQuestions[category].map((question, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => handleSuggestedQuestion(question)}
-                            className="text-left p-2 rounded bg-white hover:bg-gray-100 text-gray-700 text-sm transition-colors border border-gray-200 shadow-sm hover:shadow w-full"
-                          >
-                            {question}
-                          </button>
+            {!isMinimized && (
+              <>
+                {/* Conversation history view */}
+                {showHistory ? (
+                  <div className="h-[calc(600px-120px)] bg-gray-50 p-4 overflow-y-auto">
+                    <div className="mb-4 flex items-center justify-between">
+                      <h4 className="font-medium">Conversation History</h4>
+                      <button 
+                        onClick={() => setShowHistory(false)}
+                        className="text-gray-500 hover:text-gray-700"
+                      >
+                        Back to Chat
+                      </button>
+                    </div>
+                    
+                    <input
+                      type="text"
+                      placeholder="Search conversations..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full p-2 mb-4 border border-gray-300 rounded-lg"
+                    />
+                    
+                    {filteredHistory.length > 0 ? (
+                      <div className="space-y-2">
+                        {filteredHistory
+                          .sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated))
+                          .map((conversation) => (
+                            <div 
+                              key={conversation.id} 
+                              onClick={() => loadConversation(conversation.id)}
+                              className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer border border-gray-200"
+                            >
+                              <p className="text-sm font-medium truncate">{conversation.preview}</p>
+                              <p className="text-xs text-gray-500">
+                                {new Date(conversation.lastUpdated).toLocaleString()}
+                              </p>
+                            </div>
+                          ))}
+                      </div>
+                    ) : (
+                      <p className="text-center text-gray-500 my-4">No conversation history found</p>
+                    )}
+                  </div>
+                ) : (
+                  <>
+                    {/* Tabs for question categories */}
+                    <div className="bg-gray-100 p-2 overflow-x-auto flex gap-2 border-b border-gray-200">
+                      {categories.map((cat) => (
+                        <button
+                          key={cat.id}
+                          onClick={() => setCategory(cat.id)}
+                          className={`px-3 py-1 text-sm rounded-full whitespace-nowrap ${
+                            category === cat.id 
+                              ? 'bg-[#915EFF] text-white' 
+                              : 'bg-white text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {cat.name}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Message area with padding at top for questions */}
+                    <div className="h-[calc(600px-184px)] overflow-y-auto p-4 space-y-4 bg-gray-50">
+                      {/* Suggested Questions - Fixed position at top with padding */}
+                      <div className="space-y-2 mb-6 bg-gray-50 pt-2 pb-3">
+                        <p className="text-gray-600 text-sm font-medium">Suggested Questions:</p>
+                        <div className="grid grid-cols-1 gap-2">
+                          {suggestedQuestions[category].map((question, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => handleSuggestedQuestion(question)}
+                              className="text-left p-2 rounded bg-white hover:bg-gray-100 text-gray-700 text-sm transition-colors border border-gray-200 shadow-sm hover:shadow w-full"
+                            >
+                              {question}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4">
+                        {/* Messages */}
+                        {messages.map((msg, idx) => (
+                          <div key={idx} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'} mt-2`}>
+                            <div 
+                              className={`max-w-[80%] p-3 rounded-lg shadow-sm ${
+                                msg.isBot 
+                                  ? 'bg-white text-gray-800 border border-gray-200'
+                                  : 'bg-[#915EFF] text-white'
+                              }`}
+                            >
+                              <div dangerouslySetInnerHTML={{ __html: msg.text.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="underline">$1</a>') }} />
+                              {msg.isBot && idx === messages.length - 1 && (
+                                <div className="mt-2 flex gap-1 justify-end">
+                                  {['👍', '❤️', '😊', '🙏'].map((emoji) => (
+                                    <button
+                                      key={emoji}
+                                      onClick={() => handleEmojiClick(emoji)}
+                                      className="hover:scale-125 transition-transform"
+                                    >
+                                      {emoji}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
-                    
-                    <div className="mt-4">
-                      {/* Messages */}
-                      {messages.map((msg, idx) => (
-                        <div key={idx} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'} mt-2`}>
-                          <div 
-                            className={`max-w-[80%] p-3 rounded-lg shadow-sm ${
-                              msg.isBot 
-                                ? 'bg-white text-gray-800 border border-gray-200'
-                                : 'bg-[#915EFF] text-white'
-                            }`}
-                          >
-                            <div dangerouslySetInnerHTML={{ __html: msg.text.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="underline">$1</a>') }} />
-                            {msg.isBot && idx === messages.length - 1 && (
-                              <div className="mt-2 flex gap-1 justify-end">
-                                {['👍', '❤️', '😊', '🙏'].map((emoji) => (
-                                  <button
-                                    key={emoji}
-                                    onClick={() => handleEmojiClick(emoji)}
-                                    className="hover:scale-125 transition-transform"
-                                  >
-                                    {emoji}
-                                  </button>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* End of message area */}
-                  {/* Input area and other components go here */}
-                </>
-              )}
-            </>
-          )}
+                    {/* End of message area */}
+                    {/* Input area and other components go here */}
+                  </>
+                )}
+              </>
+            )}
 
-          {/* Social Links in footer */}
-          <div className="p-3 bg-gray-100 border-t border-gray-200 flex justify-between items-center">
-            <h4 className="text-xs text-gray-600">Connect with Ravi:</h4>
-            <div className="flex gap-3">
-              <a href="https://www.linkedin.com/in/ravi-kumar-molleti-2a566721b/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
-                <FaLinkedin size={16} />
-              </a>
-              <a href="https://github.com/0xravii" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
-                <FaGithub size={16} />
-              </a>
-              <a href="https://instagram.com/0xravii" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
-                <FaInstagram size={16} />
-              </a>
-              <a href="https://twitter.com/0xravii" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
-                <FaTwitter size={16} />
-              </a>
+            {/* Social Links in footer */}
+            <div className="p-3 bg-gray-100 border-t border-gray-200 flex justify-between items-center">
+              <h4 className="text-xs text-gray-600">Connect with Ravi:</h4>
+              <div className="flex gap-3">
+                <a href="https://www.linkedin.com/in/ravi-kumar-molleti-2a566721b/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
+                  <FaLinkedin size={16} />
+                </a>
+                <a href="https://github.com/0xravii" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
+                  <FaGithub size={16} />
+                </a>
+                <a href="https://instagram.com/0xravii" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
+                  <FaInstagram size={16} />
+                </a>
+                <a href="https://twitter.com/0xravii" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#915EFF] transition-colors">
+                  <FaTwitter size={16} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* CSS for typing indicator */}
-      <style jsx>{`
-        .fade-in {
-          animation: fadeIn 0.3s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .typing-indicator {
-          display: flex;
-          align-items: center;
-          gap: 3px;
-        }
-        
-        .typing-indicator span {
-          display: block;
-          width: 8px;
-          height: 8px;
-          background-color: #915EFF;
-          border-radius: 50%;
-          animation: typing 1.4s infinite both;
-        }
-        
-        .typing-indicator span:nth-child(2) {
-          animation-delay: 0.2s;
-        }
-        
-        .typing-indicator span:nth-child(3) {
-          animation-delay: 0.4s;
-        }
-        
-        @keyframes typing {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.5); }
-          100% { transform: scale(1); }
-        }
-        
-        .hover-grow {
-          transition: transform 0.2s ease;
-        }
-        
-        .hover-grow:hover {
-          transform: scale(1.1);
-        }
-      `}</style>
+        {/* CSS for typing indicator */}
+        <style jsx>{`
+          .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+          }
+          
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          
+          .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+          }
+          
+          .typing-indicator span {
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #915EFF;
+            border-radius: 50%;
+            animation: typing 1.4s infinite both;
+          }
+          
+          .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+          }
+          
+          .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+          }
+          
+          @keyframes typing {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+          }
+          
+          .hover-grow {
+            transition: transform 0.2s ease;
+          }
+          
+          .hover-grow:hover {
+            transform: scale(1.1);
+          }
+        `}</style>
+      </div>
     </div>
   )
 };

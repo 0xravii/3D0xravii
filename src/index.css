@@ -409,3 +409,43 @@
     font-size: 14px;
   }
 }
+
+/* Add these responsive utilities at the end of your file */
+
+/* Responsive container classes */
+.container-fluid {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/* Responsive image */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 640px) {
+  h1, h2, h3 {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
